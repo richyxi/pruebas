@@ -101,7 +101,7 @@ k = KubernetesPodOperator(namespace='airflow-prod',
                           arguments=["echo", "10"],
                           labels={"foo": "bar"},
                           secrets=[secret_file, secret_env, secret_all_keys],
-                          ports=[port]
+                          ports=[port],
                           volumes=[volume],
                           volume_mounts=[volume_mount]
                           name="test",
