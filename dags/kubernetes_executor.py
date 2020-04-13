@@ -80,7 +80,7 @@ tolerations = [
      }
 ]
 
-k = KubernetesPodOperator(namespace='default',
+k = KubernetesPodOperator(namespace='airflow-prod',
                           image="ubuntu:16.04",
                           cmds=["bash", "-cx"],
                           arguments=["echo", "10"],
