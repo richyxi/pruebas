@@ -96,7 +96,7 @@ tolerations = [
      }
 ]
 
-start = DummyOperator(task_id='run_this_first', dag=dag)
+#start = DummyOperator(task_id='run_this_first', dag=dag)
 
 k = KubernetesPodOperator(namespace='airflow-prod',
                           image="ubuntu:16.04",
@@ -117,4 +117,4 @@ k = KubernetesPodOperator(namespace='airflow-prod',
                           dag=dag
                           )
 
-k.set_upstream(start)
+#k.set_upstream(start)
