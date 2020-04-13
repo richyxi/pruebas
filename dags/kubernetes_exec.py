@@ -4,6 +4,9 @@ from airflow.operators.dummy_operator import DummyOperator
 #from airflow.contrib.operators import KubernetesOperator
 from airflow.contrib.operators.kubernetes_pod_operator import KubernetesPodOperator
 from airflow.contrib.kubernetes.secret import Secret
+from airflow.contrib.kubernetes.volume import Volume
+from airflow.contrib.kubernetes.volume_mount import VolumeMount
+from airflow.contrib.kubernetes.pod import Port
 
 default_args = {
     "owner": "airflow",
